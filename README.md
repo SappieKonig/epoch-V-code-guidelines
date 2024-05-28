@@ -8,6 +8,7 @@ import torch
 
 # Using rearrange from einops
 x = torch.randn(32, 64, 64, 3)
+# stands for batch, height, width, channels. If you work with this a lot, this starts to become a much clearer way of annotating things.
 x_rearranged = rearrange(x, 'b h w c -> b c h w')
 
 # Using permute from PyTorch
